@@ -1,0 +1,100 @@
+{
+  "estates": [
+    {
+      "id": 1,
+      "estate_title": "Modern Hospital",
+      "segment_name": "Hospitals",
+      "description": "Modern Hospital is a state-of-the-art medical facility located in the bustling City Center. This comprehensive healthcare center is dedicated to providing exceptional medical services and patient care. With a sprawling area of 50,000 square feet, the hospital houses advanced facilities including operating rooms equipped with cutting-edge technology, an emergency department for immediate medical attention, and comfortable patient rooms. It boasts a total of 300 beds, ensuring ample capacity to serve the community.\n\nSpecializing in cardiology, Modern Hospital offers specialized care in heart-related ailments, supported by advanced diagnostic technologies such as MRI and CT Scan. Additionally, the hospital provides covered parking for visitors, ensuring convenient access to medical services. Whether for routine check-ups or critical care, Modern Hospital is committed to delivering top-notch healthcare services to its patients.",
+      "price": "$10,000,000",
+      "status": "rent",
+      "area": "50,000 sq ft",
+      "location": "City Center",
+      "facilities": ["Operating rooms", "Emergency department", "Patient rooms"],
+      "image": "https://i.ibb.co/0qkYW8c/hospital.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "City Public School",
+      "segment_name": "Schools",
+      "description": "City Public School is a leading educational institution nestled in the serene Suburban Area, committed to providing quality education to K-12 students. Spanning across 30,000 square feet, the school features modern classrooms, a well-stocked library, and expansive playgrounds for recreational activities.\n\nWith a student capacity of 1000, City Public School emphasizes STEM education, offering specialized programs such as robotics and debate clubs. The school encourages holistic development through various extracurricular activities, fostering a conducive learning environment for students to excel academically and creatively.",
+      "price": "$2,000,000",
+      "status": "rent",
+      "area": "30,000 sq ft",
+      "location": "Suburban Area",
+      "facilities": ["Classrooms", "Library", "Playgrounds"],
+      "image": "https://i.ibb.co/0qkYW8c/hospital.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Sacred Heart Church",
+      "segment_name": "Religious Facilities",
+      "description": "Sacred Heart Church is a historic landmark located in Downtown, renowned for its beautiful architecture and spiritual significance. This majestic church spans 10,000 square feet and serves as a sanctuary for worship and contemplation.\n\nFounded in 1880, Sacred Heart Church holds deep Catholic traditions and is listed on the National Register of Historic Places for its Gothic Revival architectural style. It continues to be a place of reverence and historical importance, attracting visitors seeking solace and spiritual connection.",
+      "price": "Contact for price",
+      "status": "rent",
+      "area": "10,000 sq ft",
+      "location": "Downtown",
+      "facilities": ["Sanctuary", "Chapels", "Meeting rooms"],
+      "image": "https://i.ibb.co/0qkYW8c/hospital.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Central Bus Terminal",
+      "segment_name": "Transportation Terminals",
+      "description": "Central Bus Terminal is a major transportation hub located in the bustling Transport Hub area, connecting various destinations through local and regional bus services. With an expansive area of 100,000 square feet, the terminal features ticket counters, waiting areas, and restroom facilities.\n\nHandling up to 500 buses per day, Central Bus Terminal offers convenient services including Wi-Fi connectivity and a food court. The terminal is strategically situated for interstate routes, offering amenities such as taxi stands and car rental services to facilitate seamless travel.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "100,000 sq ft",
+      "location": "Transport Hub",
+      "facilities": ["Ticket counters", "Waiting area", "Restrooms"],
+      "image": "https://i.ibb.co/0qkYW8c/hospital.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Grand Convention ",
+      "segment_name": "Convention Centers",
+      "description": "Grand Convention is a versatile event venue located on the outskirts of the city, ideal for hosting conferences, exhibitions, and weddings. Spanning an impressive 200,000 square feet, the center offers well-equipped meeting rooms, expansive exhibition halls, and banquet facilities.\n\nCapable of accommodating up to 3000 attendees, Grand Convention provides valet parking for guests' convenience. The venue is tailored for a range of event types, including corporate conferences, trade shows, and weddings, offering state-of-the-art technology such as audio-visual equipment and high-speed internet connectivity to enhance event experiences.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "200,000 sq ft",
+      "location": "City Outskirts",
+      "facilities": ["Meeting rooms", "Exhibition halls", "Banquet facilities"],
+      "image": "https://i.ibb.co/0qkYW8c/hospital.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Contemporary  Gallery",
+      "segment_name": "Art Galleries",
+      "description": "Contemporary Gallery is a dynamic showcase of modern and contemporary artworks by both local emerging artists and renowned international painters. Situated in the vibrant Art District, this gallery spans 15,000 square feet and features multiple gallery spaces, art studios, and a welcoming visitor lounge.\n\nIn addition to exhibitions, Contemporary Gallery offers services such as art restoration and workshops, fostering creativity and engagement within the artistic community. Whether exploring diverse art forms or appreciating cutting-edge creations, the gallery serves as a cultural hub for art enthusiasts and collectors alike.",
+      "price": "$3,500,000",
+      "status": "sale",
+      "area": "15,000 sq ft",
+      "location": "Art District",
+      "facilities": ["Gallery spaces", "Art studios", "Visitor lounge"],
+      "image": "https://i.ibb.co/0qkYW8c/hospital.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Hindu Temple",
+      "segment_name": "Religious Facilities",
+      "description": "Hindu Temple is a beautiful sanctuary dedicated to various deities, offering a serene ambiance for worship and reflection. Nestled in the peaceful Suburban Area, the temple spans 25,000 square feet and features a main shrine, prayer halls, and a community hall.\n\nWith daily Aarti and vibrant religious festivals, Hindu Temple provides volunteer opportunities for community service programs. The traditional architectural design and religious significance make it a cherished pilgrimage site, attracting devotees seeking spiritual fulfillment and cultural enrichment.",
+      "price": "$6,000,000",
+      "status": "sale",
+      "area": "25,000 sq ft",
+      "location": "Suburban Area",
+      "facilities": ["Main shrine", "Prayer halls", "Community hall"],
+      "image": "https://i.ibb.co/0qkYW8c/hospital.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Tech Startup Incubator",
+      "segment_name": "Convention Centers",
+      "description": "Tech Startup Incubator is an innovation hub located in the thriving Tech Park, designed to support technology startups and entrepreneurs. Spanning 12,000 square feet, the incubator offers office spaces, meeting rooms, and collaborative areas to foster creativity and collaboration.\n\nWith mentorship programs and access to an investor network, Tech Startup Incubator focuses on technology startups, providing entrepreneurial programs such as pitch competitions and demo days. Whether launching innovative ventures or exploring new possibilities, the incubator empowers aspiring entrepreneurs to thrive in the dynamic tech ecosystem.",
+      "price": "Contact for price",
+      "status": "rent",
+      "area": "12,000 sq ft",
+      "location": "Tech Park",
+      "facilities": ["Office spaces", "Meeting rooms", "Networking areas"],
+      "image": "https://i.ibb.co/0qkYW8c/hospital.jpg"
+    }
+  ]
+}
