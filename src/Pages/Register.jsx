@@ -1,11 +1,61 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Register = () => {
 
+  const {createUser,googleSignIn} = useContext(AuthContext);
   const [showPassword, setShowPassword]  = useState(true);
+  const [wrongPassword, setWrongPassword] = useState('');
+  const [regSuccess, setRegSuccess] = useState('');
+
+  const handleGoogleLogin = () =>{
+    console.log('hello world');
+    googleSignIn()
+    .then(res=>{
+      console.log(res,'doing')
+    })
+    .catch((error) =>{
+      console.log(error,'login in failed')
+    })
+  }
+
+  const handleRegister = (e) =>{
+      e.preventDefault();
+      const name = e.target.name.value;
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+      const photoURL = e.target.photo.value;
+      // console.log(name,email,password,photoURL)
+
+      if (!/(?=.*[a-z])/.test(password)) {
+        setRegSuccess('')
+        setWrongPassword("Password must contain at least one lowercase letter");
+        return;
+      }else if(!/(?=.*[A-Z])/.test(password)){
+        setRegSuccess('')
+        setWrongPassword("Password must contain at least one uppercase letter");
+      }else if(password.length < 6){
+        setRegSuccess('')
+        setWrongPassword('Password must be 6 character or higher')
+      }else{
+        createUser(email,password,name,photoURL)
+        .then(res=>{
+          console.log(res)
+          setWrongPassword('')
+          setRegSuccess('You Have Registered Successfully')
+        })
+        .catch(error=>{
+          console.log('hocche na', error);
+        })
+      }
+
+
+   
+  }
+
 
   return (
     <div className="container mt-10 mx-auto">
@@ -15,7 +65,7 @@ const Register = () => {
       <div className=" bg-base-200">
           <div className="py-10 flex items-center justify-center rounded-xl flex-col">
              <div className=" shrink-0 w-2/3 lg:w-2/4 py-10 border rounded-xl px-2 lg:px-20 bg-base-100">
-            <form>
+            <form onSubmit={handleRegister}>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -41,7 +91,7 @@ const Register = () => {
                   <span className="label-text">Photo Url</span>
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   name="photo"
                   placeholder="Photo Url.."
                   className="input input-bordered"
@@ -56,6 +106,7 @@ const Register = () => {
                         <input
                             type={showPassword ? 'text' : 'password'}
                             placeholder="Password"
+                            name="password"
                             className="input input-bordered w-full" 
                             required
                         />
@@ -66,6 +117,10 @@ const Register = () => {
                                 showPassword ? <FaEyeSlash className="text-gray-500 text-2xl cursor-pointer"> </FaEyeSlash> : <FaEye className="text-gray-500 text-2xl cursor-pointer" /> 
                             }
                         </span>
+                        </div>
+                        <div>
+                          <h1 className=" text-red-700">{wrongPassword}</h1>
+                          <h1 className="text-green-600"> {regSuccess}</h1>
                         </div>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
@@ -86,7 +141,7 @@ const Register = () => {
               </h1>
             </div>
             <div>
-              <div className="p-5 text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500  cursor-pointer">
+              <div onClick={handleGoogleLogin} className="p-5 text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500  cursor-pointer">
                 <h1>Login With Google</h1>
                 <h1 className="text-xl">
                   <BsGoogle></BsGoogle>

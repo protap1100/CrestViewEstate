@@ -1,10 +1,31 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
+
+  const {signIn} = useContext(AuthContext);
+
+  const handleLogin = (e) =>{
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password  = e.target.password.value;
+    console.log(email,password)
+
+    signIn(email,password)
+    .then(res=>{
+      console.log(res.user)
+    })
+    .catch(error=>{
+      console.log(error,'Kaj Hocche na ')
+    })
+  }
+
+
+
 
   return (
     <div className="container mt-10 mx-auto">
@@ -14,13 +35,14 @@ const Login = () => {
       <div className="bg-base-200">
         <div className="py-10 flex items-center justify-center rounded-xl flex-col">
           <div className=" shrink-0 w-2/3 lg:w-2/4 py-10 border rounded-xl px-2 lg:px-20 bg-base-100">
-            <form>
+            <form onSubmit={handleLogin}>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
                 <input
                   type="email"
+                  name='email'
                   placeholder="Email"
                   className="input input-bordered"
                   required
@@ -32,6 +54,7 @@ const Login = () => {
                 </label>
                 <div className="relative">
                   <input
+                    name='password'
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
                     className="input input-bordered w-full"
