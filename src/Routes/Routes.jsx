@@ -3,6 +3,8 @@ import Error from "../Pages/Error";
 import MainPage from "../Pages/MainPage";
 import Home from "../Pages/Home";
 import UpdateProfile from "../Pages/UpdateProfile";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 export const router = createBrowserRouter([
     {
@@ -11,12 +13,24 @@ export const router = createBrowserRouter([
       errorElement: <Error></Error>,
       children: [
         {
-            path:'/home',
-            element: <Home></Home>
+          index:true,
+          element: <Home></Home>
+        },
+        {
+          path:'/home',
+          element: <Home></Home>
         },
         {
             path:'/userprofile',
             element: <UpdateProfile></UpdateProfile>
+        },
+        {
+          path:'/login',
+          element: <Login></Login>
+        },
+        {
+          path:'/register',
+          element: <Register></Register>
         }
       ]
     },

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-green-200 rounded-xl">
                 <div className="navbar-start">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,7 +30,7 @@ const Navbar = () => {
                 <div className="w-10 rounded-full">
                     <img className="rounded-full" alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                 </div>
-                    <a className="ml-5 btn btn-primary border-btn-border  bg-btn">Login</a>
+                   <Link to='/login' className="ml-5 btn btn-primary border-btn-border  bg-btn" >Login</Link>
                 </div>
                 </div>
         </div>

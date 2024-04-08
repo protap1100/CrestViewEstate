@@ -18,6 +18,7 @@ module.exports = {
         'btn-border':'#1e90ff',
         'border': '#5352ed',
         'TopBackground': '#262626',
+        'hover':'48a5ad',
       },
     },
   },
