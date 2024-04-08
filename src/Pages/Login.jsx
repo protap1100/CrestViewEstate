@@ -7,7 +7,7 @@ const Login = () => {
            <div>
                 <h1 className="text-3xl font-bold text-center my-10">Login Here</h1>
            </div>
-           <div className=" bg-base-200">
+           <div className="bg-base-200">
             <div className="py-10 flex items-center justify-center rounded-xl flex-col">
                 <div className=" shrink-0 w-2/3 lg:w-2/4 py-10 border rounded-xl px-2 lg:px-20 bg-base-100">
                 <form>
