@@ -1,0 +1,84 @@
+[
+    {
+      "estate_id": 1,
+      "name": "Dr. Sanjay Gupta",
+      "location": "City Center, Bangalore",
+      "rating": 5,
+      "review": "Modern Hospital is a world-class facility that provides exceptional medical care. The advanced technology and skilled staff ensured a comfortable experience during my treatment. Highly recommended!",
+      "review_date": "2024-04-08",
+      "image_url": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+    },
+    {
+      "estate_id": 2,
+      "name": "Alisha Patel",
+      "location": "Suburban Area, Ahmedabad",
+      "rating": 4,
+      "review": "City Public School is a wonderful educational institution with a focus on holistic development. My child thrived in the STEM program and enjoyed the vibrant extracurricular activities.",
+      "review_date": "2024-04-06",
+      "image_url": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+    },
+    {
+      "estate_id": 3,
+      "name": "John Smith",
+      "location": "Downtown, Mumbai",
+      "rating": 5,
+      "review": "Sacred Heart Church is a serene and beautiful place for prayer and reflection. The historic architecture adds to its charm and significance. A must-visit!",
+      "review_date": "2024-04-04",
+      "image_url": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+    },
+    {
+      "estate_id": 4,
+      "name": "Sophia Johnson",
+      "location": "Transport Hub, Delhi",
+      "rating": 4,
+      "review": "Central Bus Terminal offers excellent facilities and convenience for travelers. I appreciated the clean environment and efficient services.",
+      "review_date": "2024-04-02",
+      "image_url": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+    },
+    {
+      "estate_id": 5,
+      "name": "Rahul Kapoor",
+      "location": "City Outskirts, Chennai",
+      "rating": 5,
+      "review": "Grand Convention is an outstanding event venue. I organized a conference there, and everything was well-managed. Impressive facilities!",
+      "review_date": "2024-03-30",
+      "image_url": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+    },
+    {
+      "estate_id": 6,
+      "name": "Priya Desai",
+      "location": "Art District, Kolkata",
+      "rating": 5,
+      "review": "Contemporary Gallery is a gem for art enthusiasts. The diverse collection and engaging exhibitions make it a vibrant cultural hub.",
+      "review_date": "2024-03-28",
+      "image_url": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+    },
+    {
+      "estate_id": 7,
+      "name": "Suresh Menon",
+      "location": "Suburban Area, Hyderabad",
+      "rating": 4,
+      "review": "Hindu Temple is a tranquil and spiritual place. The daily Aarti is uplifting, and the community engagement programs are commendable.",
+      "review_date": "2024-03-26",
+      "image_url": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+    },
+    {
+      "estate_id": 8,
+      "name": "Ananya Singh",
+      "location": "Tech Park, Bangalore",
+      "rating": 4,
+      "review": "Tech Startup Incubator provides excellent support for startups. The mentorship and networking opportunities are invaluable for entrepreneurs.",
+      "review_date": "2024-03-24",
+      "image_url": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+    },
+    {
+      "estate_id": 9,
+      "name": "Aditya Mehta",
+      "location": "City Center, Mumbai",
+      "rating": 5,
+      "review": "Luxury Residential Tower offers unparalleled luxury living. The amenities and breathtaking views make it a prestigious place to call home.",
+      "review_date": "2024-03-22",
+      "image_url": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+    }
+  ]
+  

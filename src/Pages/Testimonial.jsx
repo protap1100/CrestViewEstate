@@ -1,0 +1,31 @@
+import { useEffect } from "react";
+import { useState } from "react";
+import Review from "../Components/Review";
+
+const Testimonial = () => {
+
+    const [reviewData,setReviewData]  = useState([]);
+
+    useEffect(()=>{
+        fetch('testimonial.json')
+        .then(res=> res.json())
+        .then(data=>setReviewData(data));
+    },[])
+
+    // const allReviews = reviewData.estate_reviews;
+    console.log(reviewData)
+
+    return (
+        <div>
+            <h1 className="text-center font-bold text-3xl my-5">This is testimonial page</h1>
+            <p className="lg:px-40 lg-3 text-center" > Meet our delighted clients! Discover their success stories and experiences with us. Join our community of happy customers and experience exceptional service firsthand</p>
+            <div className="grid grid-cols-1 gap-10 my-10 md:grid-cols-2 lg:grid-cols-3">
+                {
+                    reviewData.map(data=> <Review key={data.estate_id} data={data}></Review>)
+                }
+            </div>
+        </div>
+    );
+};
+
+export default Testimonial;
