@@ -9,7 +9,7 @@ const TopBar = () => {
 
     return (
         <div className="bg-TopBackground py-4">
-            <div className="flex px-10 justify-between items-center">
+            <div className="flex px-5 justify-between items-center">
                 <div>
                    <Link to='/' > <img className='rounded-xl' src={logo} alt="" /></Link>
                 </div>

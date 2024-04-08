@@ -14,7 +14,7 @@ const SingleData = ({oneData}) => {
                             <h2 className="text-xl font-semibold tracking-wide text-center">{estate_title}</h2>
                             <p className="dark:text-gray-800 text-center">{segment_name}</p>
                         </div>
-                        <Link to={`/estateDetails/${id}`} className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-btn text-white hover:bg-border">View Details</Link>
+                        <Link to={`/estateDetails/${id}`} className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-btn text-white hover:bg-border">View Property</Link>
                     </div>
                 </div>
             </div>

@@ -95,6 +95,18 @@
       "location": "Tech Park",
       "facilities": ["Office spaces", "Meeting rooms", "Networking areas"],
       "image": "https://i.ibb.co/0qkYW8c/hospital.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Luxury Residential Tower",
+      "segment_name": "Residential Properties",
+      "description": "Luxury Residential Tower offers exquisite living spaces in the heart of the city, featuring modern amenities and panoramic views. This upscale residential tower spans 300,000 square feet and boasts luxurious apartments with high-end finishes.\n\nEach apartment is designed for comfort and style, featuring spacious layouts, gourmet kitchens, and private balconies. Residents enjoy exclusive access to amenities such as a rooftop pool, fitness center, and concierge services.\n\nWith its prime location, Luxury Residential Tower provides easy access to shopping, dining, and entertainment options. Whether seeking a sophisticated urban lifestyle or a prestigious investment opportunity, this residential tower epitomizes luxury living in the city.",
+      "price": "$25,000,000",
+      "status": "sale",
+      "area": "300,000 sq ft",
+      "location": "City Center",
+      "facilities": ["Luxurious Apartments", "Rooftop Pool", "Fitness Center", "Concierge Services"],
+      "image": "https://i.ibb.co/0qkYW8c/hospital.jpg"
     }
   ]
 }

@@ -67,11 +67,11 @@ const Login = () => {
                     }}
                   >
                     {showPassword ? (
-                      <FaEyeSlash className="text-gray-500 text-2xl cursor-pointer">
+                      <FaEyeSlash className="text-gray-800 text-2xl cursor-pointer">
                         {" "}
                       </FaEyeSlash>
                     ) : (
-                      <FaEye className="text-gray-500 text-2xl cursor-pointer" />
+                      <FaEye className="text-gray-800 text-2xl cursor-pointer" />
                     )}
                   </span>
                 </div>
