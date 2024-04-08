@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { BsGithub, BsGoogle } from "react-icons/bs";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+
+  const [showPassword, setShowPassword]  = useState(true);
+
   return (
     <div className="container mt-10 mx-auto">
       <div>
@@ -47,12 +52,21 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className="input input-bordered"
-                  required
-                />
+                <div className="relative">
+                        <input
+                            type={showPassword ? 'text' : 'password'}
+                            placeholder="Password"
+                            className="input input-bordered w-full" 
+                            required
+                        />
+                        <span className="absolute inset-y-0 right-0 pr-3 flex items-center" onClick={() =>{
+                                setShowPassword(!showPassword)
+                            }} >
+                            {
+                                showPassword ? <FaEyeSlash className="text-gray-500 text-2xl cursor-pointer"> </FaEyeSlash> : <FaEye className="text-gray-500 text-2xl cursor-pointer" /> 
+                            }
+                        </span>
+                        </div>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
