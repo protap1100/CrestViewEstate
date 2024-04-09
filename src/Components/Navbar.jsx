@@ -17,9 +17,7 @@ const Navbar = () => {
     }
 
     // console.log(user.photoURL)
-
     // const navLink = <>
-               
     //         </>
     return (
         <div>
@@ -41,7 +39,7 @@ const Navbar = () => {
                     <NavLink to='/contact'  className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
                             }>Contact Us
-                    </NavLink>
+                    </NavLink>  
 
                     </ul>
                     </div>
