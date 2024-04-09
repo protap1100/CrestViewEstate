@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const EstateDetails = () => {
@@ -12,6 +13,9 @@ const EstateDetails = () => {
 
     return (
         <div className="font-Roboto ">
+              <Helmet>
+                <title>Estate Details</title>
+              </Helmet>
             <div>
                 <h1 className="text-2xl text-center my-5">Banner section</h1>
             </div>

@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet-async";
 const Register = () => {
 
   const {createUser,googleSignIn,GithubSignIn} = useContext(AuthContext);
-  const [showPassword, setShowPassword]  = useState(true);
+  const [showPassword, setShowPassword]  = useState(false);
   const [wrongPassword, setWrongPassword] = useState('');
   const [regSuccess, setRegSuccess] = useState('');
   const [error, setError] = useState('');

@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
   const {signIn,googleSignIn,GithubSignIn} = useContext(AuthContext);
   const [errorMessage,setErrorMessage] = useState('');
   const [successMessage,setSuccessMessage] = useState('');
