@@ -11,7 +11,7 @@ const Footer = () => {
             </div>
             <div className="flex gap-16 mx-auto lg:gap-36 lg:col-span-2 col-span-4 ">
                 <div className="flex flex-col items-center lg:items-start lg:-ml-16 space-y-3">
-                <a href="" className="font-bold text-xl">Company</a>
+                <a href="" className="font-bold text-xl">Company Policy</a>
                 <a href="" className="text-sm font-normal">About Us</a>
                 <a href="" className="text-sm font-normal">Leadership</a>
                 <a href="" className="text-sm font-normal">Career</a>
@@ -22,17 +22,16 @@ const Footer = () => {
                 <h1 className="font-bold text-xl">Support</h1>
                 <a href="" className="text-sm font-normal">Help Center</a>
                 <a href="" className="text-sm font-normal">FAQ</a>
-                <a href="" className="text-sm font-normal">Ticket Support </a>
+                <a href="" className="text-sm font-normal">Business Support </a>
                 <a href="" className="text-sm font-normal">Contact Us</a>
             </div>
             </div>
             <div className="flex flex-col items-center lg:items-start mx-auto lg:mx-0 col-span-4 lg:col-span-1 space-y-3 ">
                 <h1 className="font-bold text-xl">Services</h1>
-                <a href="" className="text-sm font-normal">Academy</a>
-                <a href="" className="text-sm font-normal">Group Lesson</a>
-                <a href="" className="text-sm font-normal">Private Lesson</a>
-                <a href="" className="text-sm font-normal">Hocket For Kids</a>
-                <a href="" className="text-sm font-normal">Hockey For Adult</a>
+                <a href="" className="text-sm font-normal">Buying</a>
+                <a href="" className="text-sm font-normal">Membership</a>
+                <a href="" className="text-sm font-normal">Money Refund</a>
+                <a href="" className="text-sm font-normal">Packages</a>
             </div>
         </div>
     </footer>

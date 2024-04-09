@@ -18,7 +18,7 @@ const EstateDetails = () => {
             <div className="container mt-5 mx-auto font-Poppins px-4 lg:px-0  my-5">
                 <h1 className="text-center font-bold text-3xl">All Details Of {estate_title}</h1>
                 <div className="my-10 flex justify-center items-center flex-col border border-gray-500">
-                    <img className="rounded-xl mt-5" src={image} alt="" />
+                    <img className="rounded-xl h-[500px] w-[600px] mt-5" src={image} alt="" />
                     <div className="my-5 flex flex-col justify-center items-center">
                         <h1 className="mt-5 text-3xl text-center font-bold" >{estate_title}</h1>
                         <h1 className="mt-5 text-center text-2xl">{segment_name}</h1>
