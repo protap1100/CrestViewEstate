@@ -4,6 +4,7 @@ import Navbar from "../Components/Navbar";
 import EstateData from "./EstateData";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Testimonial from "./Testimonial";
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
@@ -21,6 +22,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
             <div className="container mt-5 mx-auto font-Poppins px-4 lg:px-0 ">
             <Navbar></Navbar>
             <h1>Im Home page</h1>

@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import app from "../FirebaseConfig/FirebaseConfig";
 
@@ -14,6 +14,7 @@ const AuthProvider = ({children}) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth,email,password);
     }
+    
 
     const signIn =  (email,password) => {
         setLoading(true)
@@ -25,6 +26,30 @@ const AuthProvider = ({children}) => {
         setLoading(true)
         const auth = getAuth(app);
         signInWithPopup(auth, provider);
+    }
+
+    const GithubSignIn = () =>{
+        const githubProvider = new GithubAuthProvider();
+        setLoading(true)
+        const auth = getAuth(app);
+        signInWithPopup(auth, githubProvider);
+    }
+
+    const updateUserProfile = (displayName, photoURL) => {
+        setLoading(true);
+        return updateProfile(auth.currentUser, {
+            displayName: displayName,
+            photoURL: photoURL
+        })
+        .then(() => {
+            console.log('Profile updated successfully');
+        })
+        .catch((error) => {
+            console.error('Error updating profile:', error);
+        })
+        .finally(() => {
+            setLoading(false);
+        });
     }
 
 
@@ -50,6 +75,8 @@ const AuthProvider = ({children}) => {
         signIn,
         logOut,
         googleSignIn,
+        GithubSignIn,
+        updateUserProfile,
         loading
     }
 

@@ -4,7 +4,6 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
 
-
     const {user,logOut} = useContext(AuthContext);
 
     const handleSignOut = () =>{
@@ -22,7 +21,6 @@ const Navbar = () => {
     // const navLink = <>
                
     //         </>
-
     return (
         <div>
             <div className="navbar bg-green-200 rounded-xl">
@@ -33,13 +31,18 @@ const Navbar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     <NavLink to='/'  className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : "mr-5 text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600"
+                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "mr-5 text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600"
                         } >Home
                     </NavLink>
                     <NavLink to='/userprofile'  className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
+                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
                             }>Update Profile
                     </NavLink>
+                    <NavLink to='/contact'  className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
+                            }>Contact Us
+                    </NavLink>
+
                     </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">CrestViewEstate</a>
@@ -47,24 +50,27 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                     <NavLink to='/'  className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : "mr-5 text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600"
-                        } >Home
+                            isPending ? "pending" : isActive ? "text-blue-600 mr-5 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : "mr-5 text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
+                            }>Home
                     </NavLink>
                     <NavLink to='/userprofile'  className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : "ml-5 text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600"
+                            isPending ? "pending" : isActive ? "text-blue-600 mr-5 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : "mr-5 text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
                             }>Update Profile
+                    </NavLink>
+                    <NavLink to='/contact'  className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : " text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
+                            }>Contact Us
                     </NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                <div className="w-10 rounded-full tooltip" data-tip={user?.displayName? user.displayName : 'No UserName Available'}>
+                <div className="w-10 rounded-full tooltip" data-tip={user?.displayName? user.displayName : 'No Username Available'}>
                     {
                         user ? <img className="rounded-full" src={user.photoURL || 'No Photo Url'}/>  : ''
                     }
                 </div>
                    {
-                        user ?  <Link onClick={handleSignOut} className="ml-5 btn btn-primary border-btn-border  bg-btn" >Logout</Link> 
-                        :
+                        user ?  <Link onClick={handleSignOut} className="ml-5 btn btn-primary border-btn-border  bg-btn" >Logout</Link> :
                         <Link className="ml-5 btn btn-primary border-btn-border  bg-btn" to='/login'>Login</Link>
                     }
                 </div>

@@ -3,22 +3,34 @@ import { BsGithub, BsGoogle } from "react-icons/bs";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
-  const {createUser,googleSignIn} = useContext(AuthContext);
+  const {createUser,googleSignIn,GithubSignIn} = useContext(AuthContext);
   const [showPassword, setShowPassword]  = useState(true);
   const [wrongPassword, setWrongPassword] = useState('');
   const [regSuccess, setRegSuccess] = useState('');
+  const [error, setError] = useState('');
 
   const handleGoogleLogin = () =>{
-    console.log('hello world');
+    // console.log('hello world');
     googleSignIn()
     .then(res=>{
       console.log(res,'doing')
     })
     .catch((error) =>{
       console.log(error,'login in failed')
+    })
+  }
+  const handleGithubLogin = () =>{
+    console.log('Hello world');
+    GithubSignIn()
+    .then(res=>{
+      console.log(res,'Hi')
+    })
+    .catch(error=>{
+      console.log(error,'github Login Done')
     })
   }
 
@@ -48,17 +60,21 @@ const Register = () => {
           setRegSuccess('You Have Registered Successfully')
         })
         .catch(error=>{
+          setWrongPassword('')
+          setRegSuccess('')
           console.log('hocche na', error);
+          setError(error.message);
+          console.log(error.message)
         })
       }
-
-
-   
   }
 
 
   return (
     <div className="container mt-10 mx-auto">
+            <Helmet>
+                <title>Register</title>
+            </Helmet>
       <div>
         <h1 className="text-3xl font-bold text-center my-10">Register Here</h1>
       </div>
@@ -121,6 +137,7 @@ const Register = () => {
                         <div>
                           <h1 className=" text-red-700">{wrongPassword}</h1>
                           <h1 className="text-green-600"> {regSuccess}</h1>
+                          <h1 className="text-red-600"> {error}</h1>
                         </div>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
@@ -147,7 +164,7 @@ const Register = () => {
                   <BsGoogle></BsGoogle>
                 </h1>
               </div>
-              <div className="p-5 text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500  cursor-pointer">
+              <div onClick={handleGithubLogin} className="p-5 text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500  cursor-pointer">
                 <h1>Login With Github</h1>
                 <h1 className="text-xl">
                   <BsGithub></BsGithub>

@@ -3,11 +3,36 @@ import { BsGithub, BsGoogle } from "react-icons/bs";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
+  const {signIn,googleSignIn,GithubSignIn} = useContext(AuthContext);
+  const [errorMessage,setErrorMessage] = useState('');
+  const [successMessage,setSuccessMessage] = useState('');
 
-  const {signIn} = useContext(AuthContext);
+  const handleGoogleLogin = () =>{
+    // console.log('hello world');
+    googleSignIn()
+    .then(res=>{
+      console.log(res,'doing')
+    })
+    .catch((error) =>{
+      console.log(error,'login in failed')
+    })
+  }
+
+  const handleGithubLogin = () =>{
+    console.log('Hello world');
+    GithubSignIn()
+    .then(res=>{
+      console.log(res,'Hi')
+    })
+    .catch(error=>{
+      console.log(error,'github Login Done')
+    })
+  }
+
 
   const handleLogin = (e) =>{
     e.preventDefault();
@@ -16,11 +41,15 @@ const Login = () => {
     console.log(email,password)
 
     signIn(email,password)
-    .then(res=>{
-      console.log(res.user)
+    .then(()=>{
+      // console.log(res.user)
+      setErrorMessage('');
+      setSuccessMessage('Login SuccessFull');
     })
-    .catch(error=>{
-      console.log(error,'Kaj Hocche na ')
+    .catch(()=>{
+      // console.log(error,'Kaj Hocche na ')
+      setErrorMessage('Wrong Password or Email Please Try again')
+      // setErrorMessage(error.message)
     })
   }
 
@@ -29,6 +58,9 @@ const Login = () => {
 
   return (
     <div className="container mt-10 mx-auto">
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
       <div>
         <h1 className="text-3xl font-bold text-center my-10">Login Here</h1>
       </div>
@@ -68,7 +100,7 @@ const Login = () => {
                   >
                     {showPassword ? (
                       <FaEyeSlash className="text-gray-800 text-2xl cursor-pointer">
-                        {" "}
+                        
                       </FaEyeSlash>
                     ) : (
                       <FaEye className="text-gray-800 text-2xl cursor-pointer" />
@@ -81,6 +113,8 @@ const Login = () => {
                     Forgot password?
                   </a>
                 </label>
+                <h1 className=" text-red-700">{errorMessage}</h1>
+                <h1 className=" text-red-700">{successMessage}</h1>
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary bg-btn border-btn-border">
@@ -90,24 +124,24 @@ const Login = () => {
             </form>
             <div>
               <h1 className="mt-5 text-center">
-                Do Not Have Account?{" "}
+                Do Not Have Account?
                 <Link className="font-bold text-green-700" to="/register">
                   Register
                 </Link>
               </h1>
             </div>
             <div>
-              <div className="p-5 text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500 cursor-pointer">
-                <h1>Login With Google</h1>{" "}
+              <div onClick={handleGoogleLogin} className="p-5 text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500 cursor-pointer">
+                <h1>Login With Google</h1>
                 <h1 className="text-xl">
                   <BsGoogle></BsGoogle>
-                </h1>{" "}
+                </h1>
               </div>
-              <div className="p-5 text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500 cursor-pointer">
-                <h1>Login With Github</h1>{" "}
+              <div onClick={handleGithubLogin} className="p-5 text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500 cursor-pointer">
+                <h1>Login With Github</h1>
                 <h1 className="text-xl">
                   <BsGithub></BsGithub>
-                </h1>{" "}
+                </h1>
               </div>
             </div>
           </div>
