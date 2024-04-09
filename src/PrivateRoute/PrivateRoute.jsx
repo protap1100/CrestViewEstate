@@ -8,7 +8,7 @@ const PrivateRoute = ({children}) => {
 
     const {user,loading} = useContext(AuthContext);
     const location = useLocation();
-    console.log(location)
+    console.log(location.pathname)
 
     if(loading){
       return <div className="flex justify-center items-center my-40">
@@ -20,7 +20,7 @@ const PrivateRoute = ({children}) => {
         return children;
     }
 
-    return <Navigate to='/login'></Navigate>
+    return <Navigate state={location.pathname} to='/login'></Navigate>
 };
 
 export default PrivateRoute;

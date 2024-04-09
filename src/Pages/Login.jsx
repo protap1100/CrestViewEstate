@@ -1,21 +1,26 @@
 import { useContext, useState } from "react";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation , useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
   const {signIn,googleSignIn,GithubSignIn} = useContext(AuthContext);
   const [errorMessage,setErrorMessage] = useState('');
   const [successMessage,setSuccessMessage] = useState('');
+  const location = useLocation();
+  const navigate = useNavigate();
 
+  console.log('location redirect', location)
   const handleGoogleLogin = () =>{
     // console.log('hello world');
     googleSignIn()
     .then(res=>{
-      console.log(res,'doing')
+      console.log(res,'doing');
+      navigate(location?.state ? location.state : '/')
     })
     .catch((error) =>{
       console.log(error,'login in failed')
@@ -27,6 +32,7 @@ const Login = () => {
     GithubSignIn()
     .then(res=>{
       console.log(res,'Hi')
+      navigate(location?.state ? location.state : '/')
     })
     .catch(error=>{
       console.log(error,'github Login Done')
@@ -45,6 +51,7 @@ const Login = () => {
       // console.log(res.user)
       setErrorMessage('');
       setSuccessMessage('Login SuccessFull');
+      navigate(location?.state ? location.state : '/')
     })
     .catch(()=>{
       // console.log(error,'Kaj Hocche na ')
@@ -52,9 +59,6 @@ const Login = () => {
       // setErrorMessage(error.message)
     })
   }
-
-
-
 
   return (
     <div className="container mt-10 mx-auto">
