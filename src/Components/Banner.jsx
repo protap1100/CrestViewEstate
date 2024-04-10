@@ -41,8 +41,8 @@ const Banner = () => {
                             </div>
                         </div>
                         <img className='h-[600px] rounded-xl w-full object-cover' src={image2} alt="Banner 2" />
-                    </div>
-                </SwiperSlide>
+                    </div> 
+                </SwiperSlide>   
                 <SwiperSlide>
                     <div className='relative'>
                         <div className='absolute inset-0 flex items-center justify-center'>
