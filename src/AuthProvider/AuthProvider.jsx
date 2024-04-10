@@ -15,7 +15,6 @@ const AuthProvider = ({children}) => {
         return createUserWithEmailAndPassword(auth,email,password);
     }
     
-
     const signIn =  (email,password) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth,email,password);
@@ -25,14 +24,14 @@ const AuthProvider = ({children}) => {
         const provider = new GoogleAuthProvider;
         setLoading(true)
         const auth = getAuth(app);
-        signInWithPopup(auth, provider);
+        return signInWithPopup(auth, provider);
     }
 
     const GithubSignIn = () =>{
         const githubProvider = new GithubAuthProvider();
         setLoading(true)
         const auth = getAuth(app);
-        signInWithPopup(auth, githubProvider);
+        return signInWithPopup(auth, githubProvider);
     }
 
     const updateUserProfile = (displayName, photoURL) => {
@@ -42,16 +41,15 @@ const AuthProvider = ({children}) => {
             photoURL: photoURL
         })
         .then(() => {
-            console.log('Profile updated successfully');
+            // console.log('Profile updated successfully');
         })
-        .catch((error) => {
-            console.error('Error updating profile:', error);
+        .catch(() => {
+            // console.error('Error updating profile:', error);
         })
         .finally(() => {
             setLoading(false);
         });
     }
-
 
     const logOut = () =>{
         setLoading(true)

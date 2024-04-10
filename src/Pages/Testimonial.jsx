@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Review from "../Components/Review";
 
+
 const Testimonial = () => {
 
     const [reviewData,setReviewData]  = useState([]);
@@ -15,6 +16,7 @@ const Testimonial = () => {
 
     // const allReviews = reviewData.estate_reviews;
     // console.log(reviewData)
+
 
     return (
         <div className="mt-20">

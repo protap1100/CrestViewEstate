@@ -1,12 +1,25 @@
 import { Link } from "react-router-dom";
+import Aos from 'aos';
+import { useEffect } from "react";
+import 'aos/dist/aos.css';
 
 const SingleData = ({oneData}) => {
 
     const {id,estate_title,segment_name,image} = oneData;
 
+    useEffect(()=>{
+        Aos.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true 
+        });
+    },[])
+
+    // console.log(Aos)
+
     return (
-        <div>
-            <div className="border border-gray-500 shadow-xl p-5 flex flex-col justify-center items-center rounded-xl">
+        <div data-aos='fade-right' >
+            <div  className="border border-gray-500 shadow-xl p-5 flex flex-col justify-center items-center rounded-xl">
                 <div className="max-w-xs rounded-md shadow-md ">
                     <img src={image} alt="" className="object-cover object-center w-full rounded-t-md h-72 " />
                     <div className="flex flex-col justify-between p-6 space-y-8">

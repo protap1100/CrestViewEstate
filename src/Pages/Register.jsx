@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link,useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 
@@ -12,12 +12,15 @@ const Register = () => {
   const [wrongPassword, setWrongPassword] = useState('');
   const [regSuccess, setRegSuccess] = useState('');
   const [error, setError] = useState('');
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleGoogleLogin = () =>{
     // console.log('hello world');
     googleSignIn()
     .then(res=>{
       console.log(res,'doing')
+      navigate(location?.state ? location.state : '/')
     })
     .catch((error) =>{
       console.log(error,'login in failed')
@@ -28,6 +31,7 @@ const Register = () => {
     GithubSignIn()
     .then(res=>{
       console.log(res,'Hi')
+      navigate(location?.state ? location.state : '/')
     })
     .catch(error=>{
       console.log(error,'github Login Done')
@@ -58,6 +62,7 @@ const Register = () => {
           console.log(res)
           setWrongPassword('')
           setRegSuccess('You Have Registered Successfully')
+          navigate(location?.state ? location.state : '/')
         })
         .catch(error=>{
           setWrongPassword('')
@@ -130,7 +135,8 @@ const Register = () => {
                                 setShowPassword(!showPassword)
                             }} >
                             {
-                                showPassword ? <FaEyeSlash className="text-gray-800 text-2xl cursor-pointer"> </FaEyeSlash> : <FaEye className="text-gray-800 text-2xl cursor-pointer" /> 
+                                showPassword ? <FaEye className="text-gray-800 text-2xl cursor-pointer"/> : 
+                                <FaEyeSlash className="text-gray-800 text-2xl cursor-pointer" /> 
                             }
                         </span>
                         </div>

@@ -103,11 +103,10 @@ const Login = () => {
                     }}
                   >
                     {showPassword ? (
-                      <FaEyeSlash className="text-gray-800 text-2xl cursor-pointer">
-                        
-                      </FaEyeSlash>
-                    ) : (
                       <FaEye className="text-gray-800 text-2xl cursor-pointer" />
+                    ) : (
+                      <FaEyeSlash className="text-gray-800 text-2xl cursor-pointer"/>
+
                     )}
                   </span>
                 </div>
@@ -128,9 +127,9 @@ const Login = () => {
             </form>
             <div>
               <h1 className="mt-5 text-center">
-                Do Not Have Account?
+                Do Not Have Account? 
                 <Link className="font-bold text-green-700" to="/register">
-                  Register
+                   Register
                 </Link>
               </h1>
             </div>
