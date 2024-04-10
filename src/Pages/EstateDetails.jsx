@@ -14,6 +14,7 @@ const EstateDetails = () => {
     return (
         <div className="font-Roboto container mt-5 mx-auto">
               <Helmet>
+                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/card.png" />
                 <title>Estate Details</title>
               </Helmet>
             <div>

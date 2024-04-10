@@ -78,6 +78,7 @@ const Register = () => {
   return (
     <div className="container mt-10 mx-auto">
             <Helmet>
+                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/register.png" />
                 <title>Register</title>
             </Helmet>
       <div>

@@ -24,6 +24,7 @@ const Home = () => {
         <div>
             <Helmet>
                 <title>Home</title>
+                <link rel="icon" type="image/svg+xml" href='../../src/assets/icon/home.png' />
             </Helmet>
             <div className="container mt-5 mx-auto font-Poppins px-4 lg:px-0 ">
             <Navbar></Navbar>

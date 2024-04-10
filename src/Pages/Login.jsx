@@ -63,6 +63,7 @@ const Login = () => {
   return (
     <div className="container mt-10 mx-auto">
             <Helmet>
+                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/login.jpg" />
                 <title>Login</title>
             </Helmet>
       <div>

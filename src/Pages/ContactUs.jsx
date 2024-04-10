@@ -5,7 +5,8 @@ const ContactUs = () => {
     return (
         <div className="mt-5 container mx-auto">
             <Helmet>
-                <title>Applied Jobs</title>
+                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/contact.png" />
+                <title>Contact Us</title>
             </Helmet>
             <Navbar></Navbar>
             <h1 className="text-center my-10 font-bold text-3xl text-green-700">Contact Us Form</h1>
