@@ -18,12 +18,12 @@ const SingleData = ({oneData}) => {
     // console.log(Aos)
 
     return (
-        <div data-aos='fade-right' >
+        <div data-aos='fade-left' >
             <div  className="border border-gray-500 shadow-xl p-5 flex flex-col justify-center items-center rounded-xl">
                 <div className="max-w-xs rounded-md shadow-md ">
                     <img src={image} alt="" className="object-cover object-center w-full rounded-t-md h-72 " />
-                    <div className="flex flex-col justify-between p-6 space-y-8">
-                        <div className="space-y-2">
+                    <div data-aos='fade-right' className="flex flex-col justify-between p-6 space-y-8">
+                    <div className="space-y-2">
                             <h2 className="text-xl font-semibold tracking-wide text-center">{estate_title}</h2>
                             <p className="dark:text-gray-800 text-center">{segment_name}</p>
                         </div>

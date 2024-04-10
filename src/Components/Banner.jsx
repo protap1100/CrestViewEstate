@@ -19,7 +19,7 @@ const Banner = () => {
                 <p className='px-5 md:px-40 lg:px-60 text-center my-5'>Discover luxurious homes in prime locations, offering modern comfort, breathtaking views, and exceptional amenities. Your dream home awaits—explore today</p>
             </div>
             <Swiper
-                effect='fade'
+                
             >
                 <SwiperSlide>
                 <div className='relative'>

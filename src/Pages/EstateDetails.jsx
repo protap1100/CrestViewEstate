@@ -12,12 +12,12 @@ const EstateDetails = () => {
     const {estate_title,segment_name,description,price,status,area,location,facilities,image,} = estate;
 
     return (
-        <div className="font-Roboto ">
+        <div className="font-Roboto container mt-5 mx-auto">
               <Helmet>
                 <title>Estate Details</title>
               </Helmet>
             <div>
-                <h1 className="text-2xl text-center my-5">Banner section</h1>
+                    
             </div>
             <div className="container mt-5 mx-auto font-Poppins px-4 lg:px-0  my-5">
                 <h1 className="text-center font-bold text-3xl">All Details Of {estate_title}</h1>
