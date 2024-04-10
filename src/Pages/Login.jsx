@@ -14,7 +14,7 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  console.log('location redirect', location)
+  // console.log('location redirect', location)
   const handleGoogleLogin = () =>{
     // console.log('hello world');
     googleSignIn()

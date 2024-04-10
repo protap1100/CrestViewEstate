@@ -33,8 +33,8 @@ const UpdateProfile = () => {
             });
     }
 
-    console.log(user ? user.email : 'No Email')
-    console.log(user)
+    // console.log(user ? user.email : 'No Email')
+    // console.log(user) 
 
     return (    
         <div className="mt-5 container mx-auto">

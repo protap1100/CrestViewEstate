@@ -62,7 +62,7 @@ const Register = () => {
           console.log(res)
           setWrongPassword('')
           setRegSuccess('You Have Registered Successfully')
-          navigate(location?.state ? location.state : '/')
+          navigate(location?.state ? location.state : '/login')
         })
         .catch(error=>{
           setWrongPassword('')
