@@ -39,6 +39,7 @@ const UpdateProfile = () => {
     return (    
         <div className="mt-5 container mx-auto">
             <Helmet>
+                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/updateprofile.png" />
                 <title>Update Profile</title>
             </Helmet>
             <Navbar></Navbar>

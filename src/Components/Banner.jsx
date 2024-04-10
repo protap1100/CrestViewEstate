@@ -1,16 +1,33 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css'; 
-import 'swiper/css/navigation'; 
-import 'swiper/css/pagination'; 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/swiper-bundle.css';
+import { Navigation } from 'swiper/modules';
+import  SwiperCore from 'swiper';
 import 'swiper/swiper-bundle.css'; 
-// import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { useState } from 'react';
 import image1 from '../../src/assets/banner-img/Banner1.jpg';
 import image2 from '../../src/assets/banner-img/Banner2.jpg';
 import image3 from '../../src/assets/banner-img/Banner3.jpg';
 import image4 from '../../src/assets/banner-img/Banner4.jpg';
-// Initialize Swiper modules
+
+SwiperCore.use([Navigation]);
 
 const Banner = () => {
+
+    const [swiper, setSwiper] = useState(null);
+
+    const goNext = () => {
+        if (swiper) {
+            swiper.slideNext();
+        }
+    };
+    const goPrev = () => {
+        if (swiper) {
+            swiper.slidePrev();
+        }
+    };
 
     return (
         <div className="relative mt-5">
@@ -19,18 +36,22 @@ const Banner = () => {
                 <p className='px-5 md:px-40 lg:px-60 text-center my-5'>Discover luxurious homes in prime locations, offering modern comfort, breathtaking views, and exceptional amenities. Your dream home awaits—explore today</p>
             </div>
             <Swiper
-                
+                navigation={{
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }}
+                onSwiper={setSwiper}
             >
                 <SwiperSlide>
-                <div className='relative'>
-                    <div className='absolute inset-0 flex items-center justify-center'>
-                        <div className='bg-opacity-5 backdrop-filter backdrop-blur-lg p-5 max-w-[80%] md:max-w-[50%] lg:max-w-[40%] rounded-xl xl:max-w-[30%] text-center'>
-                            <h1 className='font-bold text-3xl text-gray-800'>Homes in Prime Locations</h1>
-                            <p className='text-gray-600 mt-5'>Discover exquisite luxury homes situated in prestigious prime locations, offering unparalleled elegance, comfort, and lifestyle amenities for discerning buyers</p>
+                    <div className='relative'>
+                        <div className='absolute inset-0 flex items-center justify-center'>
+                            <div className='bg-opacity-5 backdrop-filter backdrop-blur-lg p-5 max-w-[80%] md:max-w-[50%] lg:max-w-[40%] rounded-xl xl:max-w-[30%] text-center'>
+                                <h1 className='font-bold text-3xl text-gray-800'>Homes in Prime Locations</h1>
+                                <p className='text-gray-600 mt-5'>Discover exquisite luxury homes situated in prestigious prime locations, offering unparalleled elegance, comfort, and lifestyle amenities for discerning buyers</p>
+                            </div>
                         </div>
+                        <img className='h-[600px] rounded-xl w-full object-cover' src={image1} alt="Banner 1" />
                     </div>
-                    <img className='h-[600px] rounded-xl w-full object-cover' src={image1} alt="Banner 1" />
-                </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='relative'>
@@ -41,8 +62,8 @@ const Banner = () => {
                             </div>
                         </div>
                         <img className='h-[600px] rounded-xl w-full object-cover' src={image2} alt="Banner 2" />
-                    </div> 
-                </SwiperSlide>   
+                    </div>
+                </SwiperSlide>
                 <SwiperSlide>
                     <div className='relative'>
                         <div className='absolute inset-0 flex items-center justify-center'>
@@ -66,6 +87,16 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>
+            <div className="absolute inset-0 flex items-center justify-between">
+                <div className="swiper-button-prev" onClick={goPrev}>
+                    {/* Custom previous button */}
+                    &lt;
+                </div>
+                <div className="swiper-button-next" onClick={goNext}>
+                    {/* Custom next button */}
+                    &gt;
+                </div>
+            </div>
         </div>
     );
 };
