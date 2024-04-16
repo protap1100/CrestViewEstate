@@ -22,13 +22,13 @@ const EstateDetails = () => {
             </div>
             <div className="container mt-5 mx-auto font-Poppins px-4 lg:px-0  my-5">
                 <h1 className="text-center font-bold text-3xl">All Details Of {estate_title}</h1>
-                <div className="my-10 flex justify-center items-center flex-col border border-gray-500">
-                    <img className="rounded-xl h-[500px] w-[600px] mt-5" src={image} alt="" />
+                <div className="my-10 flex justify-around items-stretch gap-5 px-5 lg:flex-row flex-col  border border-gray-500">
+                    <img className="rounded-xl h-[800px] w-[600px]  mt-5" src={image} alt="" />
                     <div className="my-5 flex flex-col justify-center items-center">
                         <h1 className="mt-5 text-3xl text-center font-bold" >{estate_title}</h1>
                         <h1 className="mt-5 text-center text-2xl">{segment_name}</h1>
                         <h1 className="mt-5 text-center font-bold">Description:</h1>
-                        <p className="mt-5 px-5 text-gray-600 text-center lg:px-60">{description}</p>
+                        <p className="mt-5 px-5 text-gray-600 text-center lg:px-20">{description}</p>
                         <p className="mt-5 font-bold text-2xl">Price: {price}</p>
                         <p className="mt-5 font-bold"><span className="font-semibold">Total Area: {area}</span></p>
                         <p className="mt-5">Location: {location}</p>

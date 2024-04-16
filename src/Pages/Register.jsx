@@ -4,6 +4,8 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link,useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -11,7 +13,7 @@ const Register = () => {
   const [showPassword, setShowPassword]  = useState(false);
   const [wrongPassword, setWrongPassword] = useState('');
   const [regSuccess, setRegSuccess] = useState('');
-  const [error, setError] = useState('');
+  // const [error, setError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -48,27 +50,27 @@ const Register = () => {
 
       if (!/(?=.*[a-z])/.test(password)) {
         setRegSuccess('')
-        setWrongPassword("Password must contain at least one lowercase letter");
+        toast.error("Password must contain at least one lowercase letter");
         return;
       }else if(!/(?=.*[A-Z])/.test(password)){
         setRegSuccess('')
-        setWrongPassword("Password must contain at least one uppercase letter");
+        toast.error("Password must contain at least one uppercase letter");
       }else if(password.length < 6){
         setRegSuccess('')
-        setWrongPassword('Password must be 6 character or higher')
+        toast.error('Password must be 6 character or higher')
       }else{
         createUser(email,password,name,photoURL)
         .then(res=>{
           console.log(res)
           setWrongPassword('')
-          setRegSuccess('You Have Registered Successfully')
+          toast.success('You Have Registered Successfully')
           navigate(location?.state ? location.state : '/login')
         })
         .catch(error=>{
           setWrongPassword('')
           setRegSuccess('')
           console.log('hocche na', error);
-          setError(error.message);
+          toast.error(error.message);
           console.log(error.message)
         })
       }
@@ -82,57 +84,57 @@ const Register = () => {
                 <title>Register</title>
             </Helmet>
       <div>
-        <h1 className="text-3xl font-bold text-center my-10">Register Here</h1>
+        <h1 className="text-3xl font-bold text-center my-10 animate__animated animate__fadeInDown">Register Here</h1>
       </div>
       <div className=" bg-base-200">
           <div className="py-10 flex items-center justify-center rounded-xl flex-col">
              <div className=" shrink-0 w-2/3 lg:w-2/4 py-10 border rounded-xl px-2 lg:px-20 bg-base-100">
             <form onSubmit={handleRegister}>
-              <div className="form-control">
+              <div className="form-control animate__animated animate__fadeInDown">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text animate__animated animate__fadeInDown">Name</span>
                 </label>
                 <input
                   type="text"
                   placeholder="Name"
                   name="name"
-                  className="input input-bordered"
+                  className="input input-bordered animate__animated animate__fadeInDown"
                   required
                 />
-                <label className="label">
-                  <span className="label-text">Email</span>
+                <label className="label animate__animated animate__fadeInDown">
+                  <span className="label-text ">Email</span>
                 </label>
                 <input
                   type="email"
                   placeholder="Email"
                   name="email"
-                  className="input input-bordered"
+                  className="input input-bordered animate__animated animate__fadeInDown"
                   required
                 />
                 <label className="label">
-                  <span className="label-text">Photo Url</span>
+                  <span className="label-text animate__animated animate__fadeInDown">Photo Url</span>
                 </label>
                 <input
                   type="text"
                   name="photo"
                   placeholder="Photo Url.."
-                  className="input input-bordered"
+                  className="input input-bordered animate__animated animate__fadeInDown"
                   required
                 />
               </div>
-              <div className="form-control">
+              <div className="form-control animate__animated animate__fadeInDown">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <div className="relative">
+                <div className="relative animate__animated animate__fadeInDown">
                         <input
                             type={showPassword ? 'text' : 'password'}
                             placeholder="Password"
                             name="password"
-                            className="input input-bordered w-full" 
+                            className="input animate__animated animate__fadeInDown input-bordered w-full" 
                             required
                         />
-                        <span className="absolute inset-y-0 right-0 pr-3 flex items-center" onClick={() =>{
+                        <span className="absolute animate__animated animate__fadeInDown inset-y-0 right-0 pr-3 flex items-center" onClick={() =>{
                                 setShowPassword(!showPassword)
                             }} >
                             {
@@ -144,34 +146,34 @@ const Register = () => {
                         <div>
                           <h1 className=" text-red-700">{wrongPassword}</h1>
                           <h1 className="text-green-600"> {regSuccess}</h1>
-                          <h1 className="text-red-600"> {error}</h1>
+                          {/* <h1 className="text-red-600"> {error}</h1> */}
                         </div>
-                <label className="label">
+                <label className="label animate__animated animate__fadeInDown">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
                   </a>
                 </label>
               </div>
-              <div className="form-control mt-6">
+              <div className="form-control mt-6 animate__animated animate__fadeInDown">
                 <button className="btn btn-primary bg-btn border-btn-border">Sign Up</button>
               </div>
             </form>
             <div> 
-              <h1 className="mt-5 text-center">
+              <h1 className="mt-5 text-center animate__animated animate__fadeInDown">
                 Do Not Have An Account?{" "}
-                <Link className="font-bold text-green-700"  to="/login">
+                <Link className="font-bold text-green-700 animate__animated animate__fadeInDown"  to="/login">
                   Login
                 </Link>
               </h1>
             </div>
             <div>
-              <div onClick={handleGoogleLogin} className="p-5 text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500  cursor-pointer">
+              <div onClick={handleGoogleLogin} className="p-5 animate__animated animate__fadeInDown text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500  cursor-pointer">
                 <h1>Login With Google</h1>
                 <h1 className="text-xl">
                   <BsGoogle></BsGoogle>
                 </h1>
               </div>
-              <div onClick={handleGithubLogin} className="p-5 text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500  cursor-pointer">
+              <div onClick={handleGithubLogin} className="p-5 animate__animated animate__fadeInDown text-center bg-blue-300 rounded-xl mt-5 flex items-center justify-center gap-10 hover:bg-blue-500  cursor-pointer">
                 <h1>Login With Github</h1>
                 <h1 className="text-xl">
                   <BsGithub></BsGithub>
@@ -181,6 +183,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

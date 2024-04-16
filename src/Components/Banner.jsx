@@ -11,6 +11,7 @@ import image1 from '../../src/assets/banner-img/Banner1.jpg';
 import image2 from '../../src/assets/banner-img/Banner2.jpg';
 import image3 from '../../src/assets/banner-img/Banner3.jpg';
 import image4 from '../../src/assets/banner-img/Banner4.jpg';
+import 'animate.css';
 
 SwiperCore.use([Navigation]);
 
@@ -32,7 +33,7 @@ const Banner = () => {
     return (
         <div className="relative mt-5">
             <div className='my-10'>
-                <h1 className='font-bold text-3xl text-center'>Banner section</h1>
+                <h1 className='font-bold text-3xl text-center' >Banner section</h1>
                 <p className='px-5 md:px-40 lg:px-60 text-center my-5'>Discover luxurious homes in prime locations, offering modern comfort, breathtaking views, and exceptional amenities. Your dream home awaits—explore today</p>
             </div>
             <Swiper
@@ -89,11 +90,9 @@ const Banner = () => {
             </Swiper>
             <div className="absolute inset-0 flex items-center justify-between">
                 <div className="swiper-button-prev" onClick={goPrev}>
-                    {/* Custom previous button */}
                     &lt;
                 </div>
                 <div className="swiper-button-next" onClick={goNext}>
-                    {/* Custom next button */}
                     &gt;
                 </div>
             </div>

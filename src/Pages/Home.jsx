@@ -5,6 +5,7 @@ import EstateData from "./EstateData";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Testimonial from "./Testimonial";
 import { Helmet } from "react-helmet-async";
+import Faq from "../Components/Faq";
 
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
             <Banner></Banner>
             <EstateData></EstateData>
             <Testimonial></Testimonial>
+            <Faq></Faq>
         </div>
         </div>
     );

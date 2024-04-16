@@ -9,7 +9,7 @@ const Error = () => {
                 <Link to="/" className="btn bg-btn text-white">
                     Go to Home
                 </Link>
-                <Link to="/contact" className="btn btn-accent text-white">
+                <Link to="/contact" className="btn bg-red-500 text-white">
                     Contact Us
                 </Link>
             </div>

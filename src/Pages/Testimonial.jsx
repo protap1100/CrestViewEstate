@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Review from "../Components/Review";
+import 'animate.css'
 
 
 const Testimonial = () => {

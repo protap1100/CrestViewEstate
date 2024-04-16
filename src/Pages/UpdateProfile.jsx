@@ -46,8 +46,8 @@ const UpdateProfile = () => {
             <h1 className="text-center my-5 font-bold text-2xl text-green-400">Update Your Profile Here</h1>
             <div className="border border-black" ></div>
             <div className="flex flex-col justify-center items-center my-10">
-                <h1 className="text-2xl font-bold">{user.email ?  user.email: user.displayName}</h1>
-                <img className="h-96 w-96 mt-5 rounded-xl" src={user?user.photoURL : 'pp' } alt="Photo" />
+                <h1 className="text-2xl font-bold">Hi <span className="text-red-400"> {user.displayName ? user.displayName : user.email}!! </span></h1>
+                <img className="h-72 w-72 mt-5 rounded-xl" src={user?user.photoURL : 'pp' } alt="Photo" />
             </div>
             <div className="py-5 flex items-center justify-center rounded-xl flex-col">
                  <div className="shrink-0 w-2/3 lg:w-2/4 py-5 border rounded-xl px-2 lg:px-20 bg-base-100 ">
