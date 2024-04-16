@@ -1,42 +1,60 @@
 const Footer = () => {
-    return (
-        <div className="bg-TopBackground flex justify-center items-center text-white py-20 text-center">
-        <footer className=" footer p-5 lg:px-52  md:px-10  text-white">
-        <div className="grid grid-cols-4 gap-10">
-            <div className="col-span-4 lg:col-span-1 space-y-3 lg:text-left text-center ">
-                <h1 className="text-3xl font-extrabold">Get In Touch</h1>
-                <p>Connect with us: Reach out for inquiries or assistance. Your satisfaction is our priority in every interaction</p>
-                <p><i className="fa-regular fa-envelope mr-4 text-2xl text-red-600"></i>protapb23@gmail.com</p>
-                <p><i className="fa-solid fa-phone mr-4 text-2xl text-red-600"></i>+8801957290864</p>
+  return (
+    <div className="bg-gray-800 text-white py-10">
+      <footer className="container mx-auto px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Getting Started */}
+          <div className="space-y-4">
+            <h2 className="font-medium">Buying Property</h2>
+            <div className="flex flex-col space-y-2 text-sm">
+              <a href="#">Search Listings</a>
+              <a href="#">Mortgage Calculator</a>
+              <a href="#">Home Buying Guide</a>
+              <a href="#">Open Houses</a>
             </div>
-            <div className="flex gap-16 mx-auto lg:gap-36 lg:col-span-2 col-span-4 ">
-                <div className="flex flex-col items-center lg:items-start lg:-ml-16 space-y-3">
-                <a href="" className="font-bold text-xl">Company Policy</a>
-                <a href="" className="text-sm font-normal">About Us</a>
-                <a href="" className="text-sm font-normal">Leadership</a>
-                <a href="" className="text-sm font-normal">Career</a>
-                <a href="" className="text-sm font-normal">News & Article</a>
-                <a href="" className="text-sm font-normal">Legal Notice</a>
+          </div>
+
+          {/* Core Concepts */}
+          <div className="space-y-4">
+            <h2 className="font-medium">Selling Property</h2>
+            <div className="flex flex-col space-y-2 text-sm">
+              <a href="#">List Your Property</a>
+              <a href="#">Home Valuation</a>
+              <a href="#">Seller s Guide</a>
+              <a href="#">Marketing Strategies</a>
             </div>
-            <div className="flex flex-col items-center lg:items-start lg:ml-6 space-y-3">
-                <h1 className="font-bold text-xl">Support</h1>
-                <a href="" className="text-sm font-normal">Help Center</a>
-                <a href="" className="text-sm font-normal">FAQ</a>
-                <a href="" className="text-sm font-normal">Business Support </a>
-                <a href="" className="text-sm font-normal">Contact Us</a>
+          </div>
+
+          {/* Customization */}
+          <div className="space-y-4">
+            <h2 className="font-medium">Real Estate Services</h2>
+            <div className="flex flex-col space-y-2 text-sm">
+              <a href="#">Property Management</a>
+              <a href="#">Investment Opportunities</a>
+              <a href="#">Commercial Real Estate</a>
+              <a href="#">Real Estate Consultation</a>
             </div>
+          </div>
+
+          {/* Community */}
+          <div className="space-y-4">
+            <h2 className="font-medium">Connect With Us</h2>
+            <div className="flex flex-col space-y-2 text-sm">
+              <a href="#">Contact Us</a>
+              <a href="#">About Our Team</a>
+              <a href="#">Testimonials</a>
+              <a href="#">Blog</a>
             </div>
-            <div className="flex flex-col items-center lg:items-start mx-auto lg:mx-0 col-span-4 lg:col-span-1 space-y-3 ">
-                <h1 className="font-bold text-xl">Services</h1>
-                <a href="" className="text-sm font-normal">Buying</a>
-                <a href="" className="text-sm font-normal">Membership</a>
-                <a href="" className="text-sm font-normal">Money Refund</a>
-                <a href="" className="text-sm font-normal">Packages</a>
-            </div>
+          </div>
         </div>
-    </footer>
+
+        {/* Copyright */}
+        <div className="flex items-center justify-center mt-8 text-sm">
+          <span>&copy; {new Date().getFullYear()} Your Real Estate Company. All Rights Reserved.</span>
         </div>
-    );
+      </footer>
+    </div>
+  );
 };
 
 export default Footer;
