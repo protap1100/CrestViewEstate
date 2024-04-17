@@ -27,7 +27,7 @@ const EstateNews = () => {
     return (
         <div className="mt-5 container mx-auto">
             <Helmet>
-                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/contact.png" />
+                <link rel="icon" type="image/svg+xml" href="/src/assets/icon/news.jpg" />
                 <title>News And Blog</title>
             </Helmet>
             <Navbar></Navbar>

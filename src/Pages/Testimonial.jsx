@@ -21,7 +21,7 @@ const Testimonial = () => {
 
     return (
         <div className="mt-20">
-            <h1 className="text-center font-bold text-3xl my-5">This is testimonial page</h1>
+            <h1 className="text-center font-bold text-3xl my-5">Our Client s Review and Their Feedback</h1>
             <p className="lg:px-40 lg-3 text-center" > Meet our delighted clients! Discover their success stories and experiences with us. Join our community of happy customers and experience exceptional service firsthand</p>
             <div className="grid grid-cols-1 gap-5 my-10 md:grid-cols-2 lg:grid-cols-3">
                 {
