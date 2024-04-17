@@ -1,0 +1,79 @@
+[
+    {
+      "id": 1,
+      "type": "news",
+      "title": "Real Estate Market Update:  High Home Sales in Spring Season",
+      "date": "2024-04-15",
+      "categories": "Market Update",
+      "content": "The spring real estate market has seen record-high home sales across major cities. Low mortgage rates and increased buyer demand have fueled this surge. Explore the latest trends ",
+      "image": "https://i.ibb.co/4J6g6zv/img1.webp",
+      "source": "City Realty Insights",
+      "location": "Global"
+    },
+    {
+      "id": 2,
+      "type": "blog",
+      "title": "Tips for First-Time Homebuyers: A Comprehensive Guide",
+      "date": "2024-04-10",
+      "categories": "Homebuying Tips",
+      "content": "Are you a first-time homebuyer? Discover essential tips for navigating the real estate market, from understanding mortgage options to negotiating offers. Learn how to make informed your drea",
+      "image": "https://i.ibb.co/DMyFb8r/img2.jpg",
+      "author": "Real Estate Expert",
+      "location": "Online"
+    },
+    {
+      "id": 3,
+      "type": "news",
+      "title": "Luxury Real Estate Showcase: Waterfront Properties",
+      "date": "2024-04-05",
+      "categories": "Luxury Real Estate",
+      "content": "Explore exquisite waterfront properties from around the world, featuring stunning views and unparalleled amenities. From beachfront villas to private islands,these exceptional listings.",
+      "image": "https://i.ibb.co/wK0SWCB/g4.jpg",
+      "source": "Luxury Home Magazine",
+      "location": "Global"
+    },
+    {
+      "id": 4,
+      "type": "blog",
+      "title": "Investment Strategies:  Your Real Estate ",
+      "date": "2024-04-01",
+      "categories": "Real Estate Investment",
+      "content": "Learn effective strategies for diversifying your real estate portfolio to maximize returns and minimize risk. Explore different property types, geographic locations,  to build a robust portfolio.",
+      "image": "https://i.ibb.co/jwg5DZn/img4.jpg",
+      "author": "Real Estate Investor",
+      "location": "Online"
+    },
+    {
+      "id": 5,
+      "type": "news",
+      "title": "Trending Neighborhoods:  Real Estate Hotspots",
+      "date": "2024-03-28",
+      "categories": "Neighborhood Trends",
+      "content": "Discover the hottest neighborhoods attracting homebuyers and investors. From up-and-coming districts to revitalized urban areas, explore where real estate activity i locations are in demand.",
+      "image": "https://i.ibb.co/VJH3DDQ/images-5.jpg",
+      "source": "Real Estate Trends Today",
+      "location": "Global"
+    },
+    {
+      "id": 6,
+      "type": "blog",
+      "title": "Green Home Design:  Trends in Real Estate",
+      "date": "2024-03-25",
+      "categories": "Sustainability",
+      "content": "Discover the latest trends in green home design and sustainable architecture. Learn about eco-friendly features, energy-efficient technologies, and how sustainability is reshaping the real estate industry.",
+      "image": "https://i.ibb.co/pRgF0Yq/img6.jpg",
+      "author": "Green Living Enthusiast",
+      "location": "Online"
+    },
+    {
+      "id": 7,
+      "type": "news",
+      "title": "Luxury Real Estate Showcase: Waterfront Properties",
+      "date": "2024-04-05",
+      "categories": "Luxury Real Estate",
+      "content": "Explore exquisite waterfront properties from around the world, featuring stunning views and unparalleled amenities. From beachfront villas to private islands,these exceptional listings.",
+      "image": "https://i.ibb.co/HTLBVff/images-1.jpg",
+      "source": "Luxury Home Magazine",
+      "location": "Global"
+    }
+]

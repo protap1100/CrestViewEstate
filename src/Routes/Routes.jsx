@@ -8,6 +8,7 @@ import Register from "../Pages/Register";
 import EstateDetails from "../Pages/EstateDetails";
 import ContactUs from "../Pages/ContactUs";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import EstateNews from "../Pages/EstateNews";
 
 export const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
         {
           path:'/contact',
           element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>
+        },
+        {
+          path:'/news',
+          element: <PrivateRoute><EstateNews></EstateNews></PrivateRoute>
         }
       ]
     },

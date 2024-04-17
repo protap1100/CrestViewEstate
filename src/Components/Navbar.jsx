@@ -39,6 +39,10 @@ const Navbar = () => {
                     <NavLink to='/contact'  className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
                             }>Contact Us
+                    </NavLink> 
+                    <NavLink to='/news'  className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl mt-3 flex  items-center p-2 font-semibold bg-blue-400 border text-lg border-blue-600" : "text-blue-600 rounded-xl flex  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600 mt-3"
+                            }>Estate News
                     </NavLink>  
 
                     </ul>
@@ -56,8 +60,12 @@ const Navbar = () => {
                             }>Update Profile
                     </NavLink>
                     <NavLink to='/contact'  className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : " text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
+                            isPending ? "pending" : isActive ? "text-blue-600 mr-5 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : " mr-5 text-blue-600 rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
                             }>Contact Us
+                    </NavLink>
+                    <NavLink to='/news'  className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-blue-600 rounded-xl flex bg-blue-400  items-center p-2 font-semibold hover:bg-blue-400 border text-lg border-blue-600" : " text-blue-600  rounded-xl flex  items-center p-2  hover:bg-blue-400 border text-lg border-blue-600"
+                            }>Estate News
                     </NavLink>
                     </ul>
                 </div>

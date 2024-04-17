@@ -14,7 +14,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Core Concepts */}
           <div className="space-y-4">
             <h2 className="font-medium">Selling Property</h2>
             <div className="flex flex-col space-y-2 text-sm">
@@ -25,7 +24,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Customization */}
           <div className="space-y-4">
             <h2 className="font-medium">Real Estate Services</h2>
             <div className="flex flex-col space-y-2 text-sm">
@@ -36,7 +34,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Community */}
           <div className="space-y-4">
             <h2 className="font-medium">Connect With Us</h2>
             <div className="flex flex-col space-y-2 text-sm">
@@ -48,7 +45,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="flex items-center justify-center mt-8 text-sm">
           <span>&copy; {new Date().getFullYear()} Your Real Estate Company. All Rights Reserved.</span>
         </div>
