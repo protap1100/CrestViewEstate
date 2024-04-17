@@ -20,20 +20,28 @@ const Register = () => {
   const handleGoogleLogin = () =>{
     // console.log('hello world');
     googleSignIn()
-    .then(res=>{
-      console.log(res,'doing')
-      navigate(location?.state ? location.state : '/')
+    .then(()=>{
+      // console.log(res,'doing')
+      toast.success('Google Login Completed')
+      setTimeout(() => {
+        navigate(location?.state ? location.state : '/')
+      }, 2000);
+      
     })
     .catch((error) =>{
       console.log(error,'login in failed')
     })
   }
+  
   const handleGithubLogin = () =>{
     console.log('Hello world');
     GithubSignIn()
-    .then(res=>{
-      console.log(res,'Hi')
-      navigate(location?.state ? location.state : '/')
+    .then(()=>{
+      // console.log(res,'Hi')
+      toast.success('Github Login Completed')
+      setTimeout(() => {
+        navigate(location?.state ? location.state : '/')
+      }, 2000);
     })
     .catch(error=>{
       console.log(error,'github Login Done')
@@ -64,7 +72,9 @@ const Register = () => {
           console.log(res)
           setWrongPassword('')
           toast.success('You Have Registered Successfully')
-          navigate(location?.state ? location.state : '/login')
+          setTimeout(() => {
+            navigate(location?.state ? location.state : '/login')
+          }, 2000);
         })
         .catch(error=>{
           setWrongPassword('')

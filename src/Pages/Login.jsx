@@ -12,7 +12,7 @@ import 'animate.css';
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const {signIn,googleSignIn,GithubSignIn} = useContext(AuthContext);
-  const [errorMessage,setErrorMessage] = useState('');
+  // const [errorMessage,setErrorMessage] = useState('');
   // const [successMessage,setSuccessMessage] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
@@ -21,9 +21,13 @@ const Login = () => {
   const handleGoogleLogin = () =>{
     // console.log('hello world');
     googleSignIn()
-    .then(res=>{
-      console.log(res,'doing');
-      navigate(location?.state ? location.state : '/')
+    .then(()=>{
+      // // console.log(res,'doing');
+      // navigate(location?.state ? location.state : '/')
+      toast.success('Google Login Successful')
+      setTimeout(() => {
+        navigate(location?.state ? location.state : '/')
+      }, 2000);
     })
     .catch((error) =>{
       console.log(error,'login in failed')
@@ -33,9 +37,13 @@ const Login = () => {
   const handleGithubLogin = () =>{
     console.log('Hello world');
     GithubSignIn()
-    .then(res=>{
-      console.log(res,'Hi')
-      navigate(location?.state ? location.state : '/')
+    .then(()=>{
+      // console.log(res,'Hi')
+      toast.success('Github Login Successful')
+      setTimeout(() => {
+        navigate(location?.state ? location.state : '/')
+      }, 2000);
+     
     })
     .catch(error=>{
       console.log(error,'github Login Done')
@@ -52,9 +60,10 @@ const Login = () => {
     signIn(email,password)
     .then(()=>{
       // console.log(res.user)
-      setErrorMessage('');
       toast.success('Login SuccessFull');
-      navigate(location?.state ? location.state : '/')
+      setTimeout(() => {
+        navigate(location?.state ? location.state : '/')
+      }, 2000);
     })
     .catch(()=>{
       // console.log(error,'Kaj Hocche na ')
@@ -120,7 +129,7 @@ const Login = () => {
                     Forgot password?
                   </a>
                 </label>
-                <h1 className=" text-red-700">{errorMessage}</h1>
+                {/* <h1 className=" text-red-700">{errorMessage}</h1> */}
                 {/* <h1 className=" text-red-700">{successMessage}</h1> */}
               </div>
               <div className="form-control mt-6 animate__animated animate__fadeInDown">
