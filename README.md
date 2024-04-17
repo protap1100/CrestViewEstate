@@ -1,4 +1,13 @@
-   <h1>Real Estate Project</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Project</title>
+</head>
+<body>
+
+    <h1>Real Estate Project</h1>
     
     <p>This project is a comprehensive real estate web application built using React and Firebase, featuring various functionalities including user authentication, profile management, property listings, client reviews, latest news updates, and a contact form.</p>
 
@@ -47,3 +56,6 @@
 
     <h2>License</h2>
     <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+</body>
+</html>
